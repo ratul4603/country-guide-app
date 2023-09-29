@@ -5,7 +5,7 @@ const result = document.querySelector(".result");
 
 form.addEventListener("submit", (event)=>{
     event.preventDefault();
-    fetch(`https://restcountries.com/v3.1/name/${input.value.tolowercase()}?fullText=true`)
+    fetch(`https://restcountries.com/v3.1/name/${input.value.toLowerCase()}?fullText=true`)
     .then((data)=>data.json())
     .then((item)=>{
         result.innerHTML = `
